@@ -1,4 +1,5 @@
 --@scripts\create_5.sql
+
 CREATE TABLE categories
 (
     categories_id NUMBER(5)
