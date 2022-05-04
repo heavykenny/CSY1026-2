@@ -1,4 +1,5 @@
 --@scripts\drop_5.sql
+
 DROP TABLE categories;
 DROP TABLE tournaments;
 DROP TABLE prizes;
