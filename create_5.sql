@@ -1,5 +1,27 @@
 --@scripts\create_5.sql
 
+CREATE TABLE players
+(
+    player_id       NUMBER(8),
+    player_firstname VARCHAR2(15),
+    player_lastname  VARCHAR2(15),
+    contact_no       CHAR(11),
+    email            VARCHAR2(20)
+);
+
+CREATE TABLE teams
+(
+    team_id  NUMBER(8),
+    team_name VARCHAR2(15)
+);
+
+CREATE TABLE team_players
+(
+    team_id     NUMBER(8),
+    player_id   NUMBER(8),
+    date_joined DATE
+);
+
 CREATE TABLE categories
 (
     category_id  NUMBER(8),
@@ -15,6 +37,12 @@ CREATE TABLE tournaments
     end_date       DATE
 );
 
+CREATE TABLE sponsors
+(
+    sponsor_id  NUMBER(8),
+    sponsor_name VARCHAR2(10)
+);
+
 CREATE TABLE prizes
 (
     tournament_id NUMBER(8),
@@ -23,25 +51,11 @@ CREATE TABLE prizes
     amount        NUMBER(5, 2)
 );
 
-CREATE TABLE sponsors
-(
-    sponsor_id  NUMBER(8),
-    sponsor_name VARCHAR2(10)
-);
-
 CREATE TABLE tournament_participants
 (
     tournament_id NUMBER(8),
     player_id     NUMBER(8),
     team_id       NUMBER(8)
-);
-
-CREATE TABLE game_participants
-(
-    game_id NUMBER(8),
-    tournament_id NUMBER(8),
-    player_id NUMBER(8),
-    team_id NUMBER(8)
 );
 
 CREATE TABLE rounds
@@ -67,24 +81,11 @@ CREATE TABLE statistics
     game_deaths   NUMBER(10)
 );
 
-CREATE TABLE teams
+CREATE TABLE game_participants
 (
-    team_id  NUMBER(8),
-    team_name VARCHAR2(15)
+    game_id NUMBER(8),
+    tournament_id NUMBER(8),
+    player_id NUMBER(8),
+    team_id NUMBER(8)
 );
 
-CREATE TABLE players
-(
-    player_id       NUMBER(8),
-    player_firstname VARCHAR2(15),
-    player_lastname  VARCHAR2(15),
-    contact_no       CHAR(11),
-    email            VARCHAR2(20)
-);
-
-CREATE TABLE team_players
-(
-    team_id     NUMBER(8),
-    player_id   NUMBER(8),
-    date_joined DATE
-);
