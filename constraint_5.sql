@@ -1,3 +1,4 @@
+-- Adds Primary key constraint
 ALTER TABLE categories
 ADD CONSTRAINT pk_categories
 PRIMARY KEY (category_id);
@@ -45,3 +46,74 @@ PRIMARY KEY (player_id);
 ALTER TABLE team_players
 ADD CONSTRAINT pk_team_players
 PRIMARY KEY (team_id, player_id);
+
+-- Adds Foreign key constraint
+ALTER TABLE tournaments
+ADD CONSTRAINT fk_t_categories
+FOREIGN KEY (category_id)
+REFERENCES categories(category_id);
+
+ALTER TABLE prizes
+ADD CONSTRAINT fk_p_tournaments
+FOREIGN KEY (tournament_id)
+REFERENCES tournaments(tournament_id);
+
+ALTER TABLE prizes
+ADD CONSTRAINT fk_p_sponsors
+FOREIGN KEY (sponsor_id)
+REFERENCES sponsors(sponsor_id);
+
+ALTER TABLE tournament_participants
+ADD CONSTRAINT fk_t_p_tournaments
+FOREIGN KEY (tournament_id)
+REFERENCES tournaments(tournament_id);
+
+ALTER TABLE tournament_participants
+ADD CONSTRAINT fk_t_p_players
+FOREIGN KEY (player_id)
+REFERENCES players(player_id);
+
+ALTER TABLE tournament_participants
+ADD CONSTRAINT fk_t_p_teams
+FOREIGN KEY (team_id)
+REFERENCES teams(team_id);
+
+ALTER TABLE game_participants
+ADD CONSTRAINT fk_t_g_p_games
+FOREIGN KEY (game_id)
+REFERENCES games(game_id);
+
+ALTER TABLE game_participants
+ADD CONSTRAINT fk_t_p_tournaments
+FOREIGN KEY (tournament_id)
+REFERENCES tournaments(tournament_id);
+
+ALTER TABLE game_participants
+ADD CONSTRAINT fk_t_p_players
+FOREIGN KEY (player_id)
+REFERENCES players(player_id);
+
+ALTER TABLE game_participants
+ADD CONSTRAINT fk_t_p_teams
+FOREIGN KEY (team_id)
+REFERENCES teams(team_id);
+
+ALTER TABLE games
+ADD CONSTRAINT fk_g_rounds
+FOREIGN KEY (round_id)
+REFERENCES rounds(round_id);
+
+ALTER TABLE statistics
+ADD CONSTRAINT fk_s_games
+FOREIGN KEY (game_id)
+REFERENCES games(game_id);
+
+ALTER TABLE team_players
+ADD CONSTRAINT fk_t_pl_teams
+FOREIGN KEY (team_id)
+REFERENCES teams(team_id);
+
+ALTER TABLE team_players
+ADD CONSTRAINT fk_t_pl_players
+FOREIGN KEY (player_id)
+REFERENCES players(player_id);
