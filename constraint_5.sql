@@ -1,3 +1,4 @@
+--@scripts\constraint_5.sql
 -- Adds Primary key constraint
 ALTER TABLE categories
 ADD CONSTRAINT pk_categories
