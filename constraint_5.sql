@@ -18,11 +18,11 @@ PRIMARY KEY (sponsor_id);
 
 ALTER TABLE tournament_participants
 ADD CONSTRAINT pk_tournament_participants
-PRIMARY KEY (tournament_id, player_id, team_id);
+PRIMARY KEY (tournament_participant_id);
 
 ALTER TABLE game_participants
 ADD CONSTRAINT pk_game_participants
-PRIMARY KEY (game_id, tournament_id, player_id, team_id);
+PRIMARY KEY (game_participant_id);
 
 ALTER TABLE rounds
 ADD CONSTRAINT pk_rounds
