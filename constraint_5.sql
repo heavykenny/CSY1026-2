@@ -79,22 +79,22 @@ FOREIGN KEY (team_id)
 REFERENCES teams(team_id);
 
 ALTER TABLE game_participants
-ADD CONSTRAINT fk_t_g_p_games
+ADD CONSTRAINT fk_g_p_games
 FOREIGN KEY (game_id)
 REFERENCES games(game_id);
 
 ALTER TABLE game_participants
-ADD CONSTRAINT fk_t_p_tournaments
+ADD CONSTRAINT fk_g_p_tournaments
 FOREIGN KEY (tournament_id)
 REFERENCES tournaments(tournament_id);
 
 ALTER TABLE game_participants
-ADD CONSTRAINT fk_t_p_players
+ADD CONSTRAINT fk_g_p_players
 FOREIGN KEY (player_id)
 REFERENCES players(player_id);
 
 ALTER TABLE game_participants
-ADD CONSTRAINT fk_t_p_teams
+ADD CONSTRAINT fk_g_p_teams
 FOREIGN KEY (team_id)
 REFERENCES teams(team_id);
 

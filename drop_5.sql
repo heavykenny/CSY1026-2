@@ -55,16 +55,16 @@ ALTER TABLE tournament_participants
 DROP CONSTRAINT fk_t_p_teams;
 
 ALTER TABLE game_participants
-DROP CONSTRAINT fk_t_g_p_games;
+DROP CONSTRAINT fk_g_p_games;
 
 ALTER TABLE game_participants
-DROP CONSTRAINT fk_t_p_tournaments;
+DROP CONSTRAINT fk_g_p_tournaments;
 
 ALTER TABLE game_participants
-DROP CONSTRAINT fk_t_p_players;
+DROP CONSTRAINT fk_g_p_players;
 
 ALTER TABLE game_participants
-DROP CONSTRAINT fk_t_p_teams;
+DROP CONSTRAINT fk_g_p_teams;
 
 ALTER TABLE games
 DROP CONSTRAINT fk_g_rounds;
