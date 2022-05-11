@@ -35,6 +35,49 @@ DROP CONSTRAINT pk_players;
 ALTER TABLE team_players
 DROP CONSTRAINT pk_team_players;
 
+
+ALTER TABLE tournaments
+DROP CONSTRAINT fk_t_categories;
+
+ALTER TABLE prizes
+DROP CONSTRAINT fk_p_tournaments;
+
+ALTER TABLE prizes
+DROP CONSTRAINT fk_p_sponsors;
+
+ALTER TABLE tournament_participants
+DROP CONSTRAINT fk_t_p_tournaments;
+
+ALTER TABLE tournament_participants
+DROP CONSTRAINT fk_t_p_players;
+
+ALTER TABLE tournament_participants
+DROP CONSTRAINT fk_t_p_teams;
+
+ALTER TABLE game_participants
+DROP CONSTRAINT fk_t_g_p_games;
+
+ALTER TABLE game_participants
+DROP CONSTRAINT fk_t_p_tournaments;
+
+ALTER TABLE game_participants
+DROP CONSTRAINT fk_t_p_players;
+
+ALTER TABLE game_participants
+DROP CONSTRAINT fk_t_p_teams;
+
+ALTER TABLE games
+DROP CONSTRAINT fk_g_rounds;
+
+ALTER TABLE statistics
+DROP CONSTRAINT fk_s_games;
+
+ALTER TABLE team_players
+DROP CONSTRAINT fk_t_pl_teams;
+
+ALTER TABLE team_players
+DROP CONSTRAINT fk_t_pl_players;
+
 DROP TABLE categories;
 DROP TABLE tournaments;
 DROP TABLE prizes;
