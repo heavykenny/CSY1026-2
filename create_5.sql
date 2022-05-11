@@ -53,7 +53,8 @@ CREATE TABLE prizes
 
 CREATE TABLE tournament_participants
 (
-    tournament_id NUMBER(8),
+    tournament_participant_id NUMBER(8)
+    tournament_id NUMBER(8) NOT NULL,
     player_id     NUMBER(8),
     team_id       NUMBER(8)
 );
@@ -83,9 +84,8 @@ CREATE TABLE statistics
 
 CREATE TABLE game_participants
 (
-    game_id NUMBER(8),
-    tournament_id NUMBER(8),
-    player_id NUMBER(8),
-    team_id NUMBER(8)
+    game_participant_id NUMBER(8),
+    tournament_participant_id NUMBER(8) NOT NULL,
+    game_id NUMBER(8) NOT NULL
 );
 
