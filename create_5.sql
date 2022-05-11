@@ -17,8 +17,8 @@ CREATE TABLE teams
 
 CREATE TABLE team_players
 (
-    team_id     NUMBER(8),
-    player_id   NUMBER(8),
+    team_id     NUMBER(8) NOT NULL,
+    player_id   NUMBER(8) NOT NULL,
     date_joined DATE DEFAULT SYSDATE
 );
 
@@ -32,7 +32,7 @@ CREATE TABLE categories
 CREATE TABLE tournaments
 (
     tournament_id NUMBER(8),
-    category_id    NUMBER(8),
+    category_id    NUMBER(8) NOT NULL,
     start_date     DATE DEFAULT SYSDATE,
     end_date       DATE DEFAULT (SYSDATE + 30)
 );
@@ -75,7 +75,7 @@ CREATE TABLE games
 CREATE TABLE statistics
 (
     statistic_id NUMBER(8),
-    game_id       NUMBER(8),
+    game_id       NUMBER(8) NOT NULL,
     game_duration NUMBER(11),
     game_kills    NUMBER(10) DEFAULT 0,
     game_deaths   NUMBER(10) DEFAULT 0
