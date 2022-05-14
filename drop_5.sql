@@ -2,16 +2,7 @@
 
 --drop foreign keys
 ALTER TABLE game_participants
-DROP CONSTRAINT fk_g_p_games;
-
-ALTER TABLE game_participants
-DROP CONSTRAINT fk_g_p_tournaments;
-
-ALTER TABLE game_participants
-DROP CONSTRAINT fk_g_p_teams;
-
-ALTER TABLE game_participants
-DROP CONSTRAINT fk_g_p_players;
+DROP CONSTRAINT fk_g_p_tournament_participants;
 
 ALTER TABLE statistics
 DROP CONSTRAINT fk_s_games;
