@@ -80,6 +80,17 @@ DROP CONSTRAINT pk_statistics;
 ALTER TABLE game_participants
 DROP CONSTRAINT pk_game_participants;
 
+-- Drop Unique Constraints
+ALTER TABLE players
+DROP CONSTRAINT u_pl_email;
+
+-- Drop Check Constraints
+ALTER TABLE players
+DROP CONSTRAINT ck_player_upper;
+
+ALTER TABLE rounds
+DROP CONSTRAINT ck_round_level;
+
 --drop tables
 DROP TABLE players;
 DROP TABLE teams;

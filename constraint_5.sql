@@ -118,3 +118,19 @@ ALTER TABLE team_players
 ADD CONSTRAINT fk_t_pl_players
 FOREIGN KEY (player_id)
 REFERENCES players(player_id);
+
+--Add Unique Constraints
+ALTER TABLE players
+ADD CONSTRAINT u_pl_email
+UNIQUE (email);
+
+-- Add Check Constraints
+-- Checking constraint to make sure First and Last Name is UPPER
+ALTER TABLE players
+ADD CONSTRAINT ck_player_upper
+CHECK (player_firstname = UPPER(player_firstname) AND player_lastname = UPPER(player_lastname));
+
+-- making sure that round_level is greater than 0.
+ALTER TABLE rounds
+ADD CONSTRAINT ck_round_level
+CHECK (round_level > 0);
