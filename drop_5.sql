@@ -91,6 +91,10 @@ DROP CONSTRAINT ck_player_upper;
 ALTER TABLE rounds
 DROP CONSTRAINT ck_round_level;
 
+-- Drop Sequences
+DROP SEQUENCE seq_players;
+DROP SEQUENCE seq_sponsors;
+
 --drop tables
 DROP TABLE players;
 DROP TABLE teams;

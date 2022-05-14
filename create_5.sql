@@ -89,3 +89,11 @@ CREATE TABLE game_participants
     game_id                   NUMBER(8) NOT NULL
 );
 
+-- Create Sequences
+CREATE SEQUENCE seq_players
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_sponsors
+INCREMENT BY 1
+START WITH 100 MAXVALUE 200;
