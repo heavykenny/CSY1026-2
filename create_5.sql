@@ -46,7 +46,7 @@ CREATE TABLE sponsors
 CREATE TABLE prizes
 (
     tournament_id NUMBER(8),
-    sponsor_id    NUMBER(8),
+    sponsor_id    NUMBER(8) NOT NULL,
     achievement   VARCHAR2(15),
     amount        NUMBER(5, 2)
 );
@@ -69,7 +69,7 @@ CREATE TABLE rounds
 CREATE TABLE games
 (
     game_id    NUMBER(8),
-    round_id   NUMBER(8),
+    round_id   NUMBER(8) NOT NULL,
     start_time DATE DEFAULT SYSDATE
 );
 
