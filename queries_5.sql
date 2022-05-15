@@ -36,3 +36,57 @@ FROM statistics;
 
 SELECT *
 FROM game_participants;
+
+
+-- 3 COLUMN PROJECTIONS
+--more records need to be inserted to show the queries fully
+
+SELECT player_id, player_firstname, email
+FROM players
+ORDER BY player_firstname DESC;
+
+--has 2 columns of data, so might not be suitable to work with
+SELECT team_id, team_name
+FROM teams
+ORDER BY team_name DESC;
+
+SELECT team_id, player_id, date_joined
+FROM team_players
+ORDER BY team_id DESC;
+
+SELECT category_id, game_name, game_genre
+FROM categories
+ORDER BY game_name DESC;
+
+SELECT tournament_id, category_id, start_date
+FROM tournaments
+ORDER BY tournament_id DESC;
+
+--has 2 columns of data, so might not be suitable to work with
+SELECT sponsor_id, sponsor_name
+FROM sponsors
+ORDER BY sponsor_name DESC;
+
+SELECT tournament_id, achievement, amount
+FROM prizes
+ORDER BY tournament_id DESC;
+
+SELECT tournament_participant_id, tournament_id, player_id
+FROM tournament_participants
+ORDER BY tournament_participant_id DESC;
+
+SELECT round_id, round_level, level_description
+FROM rounds
+ORDER BY round_level DESC;
+
+SELECT game_id, round_id, start_time
+FROM games
+ORDER BY game_id DESC;
+
+SELECT statistic_id, game_id, game_duration
+FROM statistics
+ORDER BY statistic_id DESC;
+
+SELECT game_participant_id, tournament_participant_id, game_id
+FROM game_participants
+ORDER BY game_id DESC;
