@@ -33,10 +33,10 @@ VALUES (2, 'PAINT BALL', 'ADVENTURE');
 
 INSERT INTO tournaments
 (tournament_id, category_id, start_date, end_date)
-VALUES (1, 1, '19-JUN-2022', '26-JUNE 2022');
+VALUES (1, 1, '19-JUN-2022', '26-JUN-2022');
 
 INSERT INTO tournaments
-VALUES (2, 1, '18-JUN-2022', '27-JUNE 2022');
+VALUES (2, 1, '18-JUN-2022', '27-JUN-2022');
 
 INSERT INTO tournaments
 (tournament_id, category_id)
@@ -47,7 +47,7 @@ INSERT INTO sponsors
 VALUES (seq_sponsors.NEXTVAL, 'MONSTER DRINK');
 
 INSERT INTO sponsors
-VALUES (seq_sponsors.NEXTVAL, 'COCOA COLA');
+VALUES (seq_sponsors.NEXTVAL, 'COCA COLA');
 
 INSERT INTO prizes
 (tournament_id, sponsor_id, achievement, amount)
