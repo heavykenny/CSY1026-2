@@ -1,42 +1,29 @@
 --@scripts\queries_5.sql
 
 -- ALL RECORDS FROM EACH TABLE
-SELECT *
-FROM players;
+SELECT * FROM players;
 
-SELECT *
-FROM teams;
+SELECT * FROM teams;
 
-SELECT *
-FROM team_players;
+SELECT * FROM team_players;
 
-SELECT *
-FROM categories;
+SELECT * FROM categories;
 
-SELECT *
-FROM tournaments;
+SELECT * FROM tournaments;
 
-SELECT *
-FROM sponsors;
+SELECT * FROM sponsors;
 
-SELECT *
-FROM prizes;
+SELECT * FROM prizes;
 
-SELECT *
-FROM tournament_participants;
+SELECT * FROM tournament_participants;
 
-SELECT *
-FROM rounds;
+SELECT * FROM rounds;
 
-SELECT *
-FROM games;
+SELECT * FROM games;
 
-SELECT *
-FROM statistics;
+SELECT * FROM statistics;
 
-SELECT *
-FROM game_participants;
-
+SELECT * FROM game_participants;
 
 -- 3 COLUMN PROJECTIONS
 --more records need to be inserted to show the queries fully
@@ -90,3 +77,11 @@ ORDER BY statistic_id DESC;
 SELECT game_participant_id, tournament_participant_id, game_id
 FROM game_participants
 ORDER BY game_id DESC;
+
+-- Restriction Queries with Condition
+
+-- Condition to get all player with a GMAIL account also uses aliases
+SELECT p.player_firstname AS firstname, p.player_lastname AS lastname, email
+FROM players p
+WHERE email LIKE '%GMAIL%'
+ORDER BY firstname DESC;
