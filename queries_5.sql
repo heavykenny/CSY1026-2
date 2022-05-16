@@ -1,6 +1,6 @@
 --@scripts\queries_5.sql
 
--- ALL RECORDS FROM EACH TABLE
+-- selecting all records from each tables.
 SELECT * FROM players;
 
 SELECT * FROM teams;
@@ -26,7 +26,7 @@ SELECT * FROM statistics;
 SELECT * FROM game_participants;
 
 -- 3 COLUMN PROJECTIONS
---more records need to be inserted to show the queries fully
+-- more records need to be inserted to show the queries fully
 
 SELECT player_id, player_firstname, email
 FROM players
@@ -80,27 +80,31 @@ ORDER BY game_id DESC;
 
 -- Restriction Queries with Condition
 
--- Condition to get all player with a GMAIL account also uses aliases
+-- Condition to get all player with a GMAIL account
+-- Also uses aliases for table name and format output
 SELECT p.player_firstname AS firstname, p.player_lastname AS lastname, email
 FROM players p
 WHERE email LIKE '%GMAIL%'
 ORDER BY firstname DESC;
 
--- Select Active players
+-- Select ACTIVE players in DESC
+-- Also uses aliases for table name and format output
 SELECT p.player_firstname AS firstname, p.player_lastname AS lastname, email
 FROM players p
 WHERE p.status = 'ACTIVE'
 ORDER BY firstname DESC;
 
 -- Query to select all sponsors and the prize they are sponsoring
+-- Also uses aliases for table name and format output
 SELECT s.sponsor_name AS sponsor, p.achievement AS achievement, p.amount AS amount
 FROM prizes p
 INNER JOIN sponsors s
 ON s.sponsor_id = p.sponsor_id
 ORDER BY sponsor ASC;
 
--- query to select the player-name, gender, game name and genre a player is participating
--- this query joins 3 table and sort in player's firstname in ASC order
+-- Query to select the player-name, gender, game name and genre a player is participating
+-- Also uses aliases for table name and format output
+-- This query joins 3 table and sort in player's firstname in ASC order
 SELECT p.player_firstname AS firstname, p.player_lastname AS lastname, c.game_name AS gamename, c.game_genre AS genre
 FROM players p
 INNER JOIN tournament_participants tp
