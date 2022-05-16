@@ -9,7 +9,7 @@ CREATE TABLE players
     email            VARCHAR2(20),
     location         VARCHAR2(15) NOT NULL,
     gender           CHAR(1) NOT NULL,
-    status           VARCHAR2(5) DEFAULT 'INACTIVE'
+    status           VARCHAR2(10) DEFAULT 'INACTIVE'
 );
 
 CREATE TABLE teams
