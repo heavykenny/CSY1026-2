@@ -1,4 +1,4 @@
--- This file contains other necessary constraint to get all
+-- This file contains other necessary statement to get all
 -- tables, primary keys, foreign keys, unique constraint, check constraint
 
 -- Check all tables created
