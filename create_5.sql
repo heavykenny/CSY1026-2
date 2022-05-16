@@ -1,5 +1,6 @@
 --@scripts\create_5.sql
 
+-- Create the Tables with attributes
 CREATE TABLE players
 (
     player_id        NUMBER(8),
@@ -93,10 +94,18 @@ CREATE TABLE game_participants
 );
 
 -- Create Sequences
+
+-- Create player_id sequence
 CREATE SEQUENCE seq_players
 INCREMENT BY 1
-START WITH 1;
+START WITH 10000000;
 
+-- Create sponsor_id sequence
 CREATE SEQUENCE seq_sponsors
 INCREMENT BY 1
 START WITH 100 MAXVALUE 200;
+
+-- Create statistic_id sequence
+CREATE SEQUENCE seq_statistics
+INCREMENT BY 1
+START WITH 1;
