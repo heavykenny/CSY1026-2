@@ -85,3 +85,9 @@ SELECT p.player_firstname AS firstname, p.player_lastname AS lastname, email
 FROM players p
 WHERE email LIKE '%GMAIL%'
 ORDER BY firstname DESC;
+
+-- Select Active players
+SELECT p.player_firstname AS firstname, p.player_lastname AS lastname, email
+FROM players p
+WHERE p.status = 'ACTIVE'
+ORDER BY firstname DESC;
