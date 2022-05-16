@@ -98,3 +98,15 @@ FROM prizes p
 INNER JOIN sponsors s
 ON s.sponsor_id = p.sponsor_id
 ORDER BY sponsor ASC;
+
+-- query to select the player-name, gender, game name and genre a player is participating
+-- this query joins 3 table and sort in player's firstname in ASC order
+SELECT p.player_firstname AS firstname, p.player_lastname AS lastname, c.game_name AS gamename, c.game_genre AS genre
+FROM players p
+INNER JOIN tournament_participants tp
+ON tp.player_id = p.player_id
+INNER JOIN tournaments t
+ON tp.tournament_id = t.tournament_id
+INNER JOIN categories c
+ON t.category_id = c.category_id
+ORDER BY firstname ASC;
