@@ -1,3 +1,5 @@
+--@scripts\insert_5.sql
+
 -- TODO: Use different ways to insert. At least 5 records each table
 
 --INSERT PLAYERS RECORDS
