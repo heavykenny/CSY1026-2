@@ -35,6 +35,9 @@ and finally purge the database.
 This additional file shows tables, primary keys constraints, foreign keys constraints, unique constraints and check constraints
 This allows us to validate if all listed above have been successfully created or dropped.
 
+#### 6. queries_5.sql
+This file queries all the data by selecting the tables and columns by extracting it to give you information.
+
 ### How to run
 
 - Login in to the ORACLE DATABASE using your credentials
