@@ -82,6 +82,12 @@ DROP CONSTRAINT ck_player_upper;
 ALTER TABLE rounds
 DROP CONSTRAINT ck_round_level;
 
+ALTER TABLE players
+DROP CONSTRAINT ck_p_gender;
+
+ALTER TABLE players
+DROP CONSTRAINT ck_p_status;
+
 -- Drop Sequences
 DROP SEQUENCE seq_players;
 DROP SEQUENCE seq_sponsors;
