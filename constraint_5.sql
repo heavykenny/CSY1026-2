@@ -119,3 +119,12 @@ CHECK (player_firstname = UPPER(player_firstname) AND player_lastname = UPPER(pl
 ALTER TABLE rounds
 ADD CONSTRAINT ck_round_level
 CHECK (round_level > 0);
+
+-- checking player's gender is either M or F
+ALTER TABLE players
+ADD CONSTRAINT ck_p_gender
+CHECK (gender IN ('M', 'F'));
+
+ALTER TABLE players
+ADD CONSTRAINT ck_p_status
+CHECK (status IN ('ACTIVE', 'INACTIVE', 'SUSPENDED'));
