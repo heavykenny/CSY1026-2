@@ -105,6 +105,7 @@ FOREIGN KEY (player_id)
 REFERENCES players(player_id);
 
 --Add Unique Constraints
+-- checking email is unique for all players
 ALTER TABLE players
 ADD CONSTRAINT u_pl_email
 UNIQUE (email);
@@ -125,6 +126,7 @@ ALTER TABLE players
 ADD CONSTRAINT ck_p_gender
 CHECK (gender IN ('M', 'F'));
 
+-- checking player's status is either ACTIVE, INACTIVE or SUSPENDED
 ALTER TABLE players
 ADD CONSTRAINT ck_p_status
 CHECK (status IN ('ACTIVE', 'INACTIVE', 'SUSPENDED'));
