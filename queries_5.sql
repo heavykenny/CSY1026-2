@@ -91,3 +91,10 @@ SELECT p.player_firstname AS firstname, p.player_lastname AS lastname, email
 FROM players p
 WHERE p.status = 'ACTIVE'
 ORDER BY firstname DESC;
+
+-- Query to select all sponsors and the prize they are sponsoring
+SELECT s.sponsor_name AS sponsor, p.achievement AS achievement, p.amount AS amount
+FROM prizes p
+INNER JOIN sponsors s
+ON s.sponsor_id = p.sponsor_id
+ORDER BY sponsor ASC;
