@@ -4,6 +4,9 @@
 ALTER TABLE game_participants
 DROP CONSTRAINT fk_g_p_tournament_participants;
 
+ALTER TABLE game_participants
+DROP CONSTRAINT fk_g_p_games;
+
 ALTER TABLE statistics
 DROP CONSTRAINT fk_s_games;
 
