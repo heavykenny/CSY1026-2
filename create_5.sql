@@ -6,7 +6,10 @@ CREATE TABLE players
     player_firstname VARCHAR2(15),
     player_lastname  VARCHAR2(15),
     contact_no       CHAR(11),
-    email            VARCHAR2(20)
+    email            VARCHAR2(20),
+    location         VARCHAR2(15) NOT NULL,
+    gender           CHAR(1) NOT NULL,
+    status           VARCHAR2(5) DEFAULT 'INACTIVE'
 );
 
 CREATE TABLE teams
