@@ -30,13 +30,15 @@ include using column names, insertion without column names and insertion with de
 This file drops all the foreign key constraints, primary key constraints, unique and check constraints, then all the tables
 and finally purge the database.
 
-#### 5. others.sql
+#### 5. queries_5.sql
+
+This file queries and fetch data from all tables and columns. It also selects certain column from tables and join statement 
+with other tables.
+
+#### 6. others.sql
 
 This additional file shows tables, primary keys constraints, foreign keys constraints, unique constraints and check constraints
 This allows us to validate if all listed above have been successfully created or dropped.
-
-#### 6. queries_5.sql
-This file queries all the data by selecting the tables and columns by extracting it to give you information.
 
 ### How to run
 
