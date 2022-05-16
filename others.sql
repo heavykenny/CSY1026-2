@@ -1,3 +1,5 @@
+--@scripts\others.sql
+
 -- This file contains other necessary statement to get all
 -- tables, primary keys, foreign keys, unique constraint, check constraint
 
