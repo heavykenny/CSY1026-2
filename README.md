@@ -40,7 +40,7 @@ This allows us to validate if all listed above have been successfully created or
 - Login in to the ORACLE DATABASE using your credentials
 - Run the sql starting with create_5.sql, constraint_5.sql, insert_5.sql, queries_5.sql.
 ```oraclesqlplus
-Example: @scripts/create_5.sql or @/developement/CSY1026-2/create_5.sql
+Example: @scripts\create_5.sql or @/developement/CSY1026-2/create_5.sql
 ```
 - Run drop_5.sql only when you want to delete all records.
 - others.sql can be run at any time.
