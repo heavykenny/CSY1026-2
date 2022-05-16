@@ -3,20 +3,21 @@
 
 --INSERT PLAYERS
 INSERT INTO players
-(player_id, player_firstname, player_lastname, contact_no, email)
-VALUES (18392294, 'JAMES', 'HOUGH', '+1234567890', 'J.HOUGH@GMAIL.COM');
+(player_id, player_firstname, player_lastname, contact_no, email, location, gender, status)
+VALUES (18392294, 'JAMES', 'HOUGH', '+1234567890', 'J.HOUGH@GMAIL.COM', 'NORTHAMPTON', 'M', 'ACTIVE');
 
 INSERT INTO players
-VALUES (21204410, 'AARON', 'ADAM', '+4409938470', 'A.ADAM99@OUTLOOK.COM');
+VALUES (21204410, 'AARON', 'ADAM', '+4409938470', 'A.ADAM99@OUTLOOK.COM', 'OXFORD', 'M', 'ACTIVE');
+
+-- default status is added - 'INACTIVE'
+INSERT INTO players (player_id, player_firstname, player_lastname, contact_no, email, location, gender)
+VALUES (77051429, 'DAVID', 'MOUNDS', '+4402739502', 'DAVEMOUNDS@YAHOO.COM', 'NOTTINGHAM', 'M');
 
 INSERT INTO players
-VALUES (77051429, 'DAVID', 'MOUNDS', '+4402739502', 'DAVEMOUNDS@YAHOO.COM');
+VALUES (49103866, 'MICAHEL', 'TONER', '+4438561064', 'TONER.M@ICLOUD.COM', 'LIVERPOOL', 'F', 'ACTIVE');
 
 INSERT INTO players
-VALUES (49103866, 'MICAHEL', 'TONER', '+4438561064', 'TONER.M@ICLOUD.COM');
-
-INSERT INTO players
-VALUES (62652978, 'JACKSON', 'KEYS', '+4382901047', 'JACK.KEYS@GMAIL.COM');
+VALUES (62652978, 'JACKSON', 'KEYS', '+4382901047', 'JACK.KEYS@GMAIL.COM', 'LEICESTER', 'F', 'ACTIVE');
 
 
 --INSERT TEAMS
@@ -84,11 +85,12 @@ VALUES (01642437, 11938229, '18-JUN-2022', '27-JUN-2022');
 INSERT INTO tournaments
 VALUES (31241620, 41935272, '02-JUN-2022', '13-JUN-2022');
 
-INSERT INTO tournaments
-VALUES (28863500, 08647503, '05-JUN-2022', '20-JUN-2022');
+-- insert with default values
+INSERT INTO tournaments (tournament_id, category_id)
+VALUES (28863500, 08647503);
 
-INSERT INTO tournaments
-VALUES (33329346, 97054182, '11-JUN-2022', '30-JUN-2022');
+INSERT INTO tournaments (tournament_id, category_id)
+VALUES (33329346, 97054182);
 
 
 --INSERT SPONSORS
