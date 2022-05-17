@@ -143,3 +143,13 @@ INNER JOIN players p
 ON p.player_id = tp.player_id
 WHERE tp.date_joined BETWEEN '01-JAN-2020' AND '30-DEC-2021'
 ORDER BY tp.date_joined ASC;
+
+-- Demonstrating a join for 2 tables
+-- this gets all the players with date join greater that 2021
+-- Also uses aliases for table name and format output
+SELECT p.player_firstname AS name, tp.player_id AS "PLAYER ID", tp.date_joined AS JOINED
+FROM team_players tp
+INNER JOIN players p
+ON tp.player_id = p.player_id
+WHERE tp.date_joined > '31-DEC-2021'
+ORDER BY tp.team_id DESC;
