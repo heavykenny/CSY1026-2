@@ -95,6 +95,9 @@ DROP CONSTRAINT ck_p_status;
 DROP SEQUENCE seq_players;
 DROP SEQUENCE seq_sponsors;
 DROP SEQUENCE seq_statistics;
+DROP SEQUENCE seq_categories;
+DROP SEQUENCE seq_tournaments;
+DROP SEQUENCE seq_games;
 
 --drop tables
 DROP TABLE players;

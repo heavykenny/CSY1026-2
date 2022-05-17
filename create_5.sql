@@ -7,7 +7,7 @@ CREATE TABLE players
     player_firstname VARCHAR2(15),
     player_lastname  VARCHAR2(15),
     contact_no       CHAR(11),
-    email            VARCHAR2(20),
+    email            VARCHAR2(20) NOT NULL,
     location         VARCHAR2(15) NOT NULL,
     gender           CHAR(1) NOT NULL,
     status           VARCHAR2(10) DEFAULT 'INACTIVE'
@@ -109,3 +109,18 @@ START WITH 100 MAXVALUE 200;
 CREATE SEQUENCE seq_statistics
 INCREMENT BY 1
 START WITH 1;
+
+-- Create category_id sequence
+CREATE SEQUENCE seq_categories
+INCREMENT BY 10
+START WITH 10000000;
+
+-- Create tournament_id sequence
+CREATE SEQUENCE seq_tournaments
+INCREMENT BY 500
+START WITH 10000000;
+
+-- Create game_id sequence
+CREATE SEQUENCE seq_games
+INCREMENT BY 5
+START WITH 10;
