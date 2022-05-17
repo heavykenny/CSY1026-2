@@ -114,3 +114,32 @@ ON tp.tournament_id = t.tournament_id
 INNER JOIN categories c
 ON t.category_id = c.category_id
 ORDER BY firstname ASC;
+
+-- Demonstrating a join for 6 tables, this gets all the kills and death for a game category
+-- Also uses aliases for table name and format output
+SELECT c.game_name AS category, s.game_kills AS kills, s.game_deaths as deaths
+FROM categories c
+INNER JOIN tournaments t
+ON t.category_id = c.category_id
+INNER JOIN tournament_participants tp
+ON tp.tournament_id = t.tournament_id
+INNER JOIN game_participants gp
+ON gp.tournament_participant_id = tp.tournament_participant_id
+INNER JOIN games g
+ON gp.game_id = g.game_id
+INNER JOIN statistics s
+ON s.game_id = g.game_id
+WHERE c.game_name = 'ULTIMATE SEARCH';
+
+
+-- Demonstrating a join for 3 tables,
+-- this gets all the team name and players where Date is not between 2020 and 2021
+-- Also uses aliases for table name and format output
+SELECT t.team_name AS "TEAM NAME", tp.date_joined AS "DATE JOINED"
+FROM teams t
+INNER JOIN team_players tp
+ON tp.team_id = t.team_id
+INNER JOIN players p
+ON p.player_id = tp.player_id
+WHERE tp.date_joined BETWEEN '01-JAN-2020' AND '30-DEC-2021'
+ORDER BY tp.date_joined ASC;
