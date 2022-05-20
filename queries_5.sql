@@ -26,16 +26,10 @@ SELECT * FROM statistics;
 SELECT * FROM game_participants;
 
 -- 3 COLUMN PROJECTIONS
--- more records need to be inserted to show the queries fully
-
+-- shows records in three column projections sorted in descending orders
 SELECT player_id, player_firstname, email
 FROM players
 ORDER BY player_firstname DESC;
-
---has 2 columns of data, so might not be suitable to work with
-SELECT team_id, team_name
-FROM teams
-ORDER BY team_name DESC;
 
 SELECT team_id, player_id, date_joined
 FROM team_players
@@ -48,11 +42,6 @@ ORDER BY game_name DESC;
 SELECT tournament_id, category_id, start_date
 FROM tournaments
 ORDER BY tournament_id DESC;
-
---has 2 columns of data, so might not be suitable to work with
-SELECT sponsor_id, sponsor_name
-FROM sponsors
-ORDER BY sponsor_name DESC;
 
 SELECT tournament_id, achievement, amount
 FROM prizes
