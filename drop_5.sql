@@ -1,4 +1,5 @@
 --@scripts\drop_5.sql
+-- @/Users/kenny/Oracle_Home/scripts/drop_5.sql
 
 --drop foreign keys
 ALTER TABLE game_participants

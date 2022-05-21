@@ -49,3 +49,11 @@ Example: @scripts\create_5.sql or @/developement/CSY1026-2/create_5.sql
 ```
 - Run drop_5.sql only when you want to delete all records.
 - others.sql can be run at any time.
+
+
+@/Users/kenny/Oracle_Home/scripts/create_5.sql
+@/Users/kenny/Oracle_Home/scripts/constraint_5.sql
+@/Users/kenny/Oracle_Home/scripts/insert_5.sql
+@/Users/kenny/Oracle_Home/scripts/queries_5.sql
+@/Users/kenny/Oracle_Home/scripts/drop_5.sql
+@/Users/kenny/Oracle_Home/scripts/others_5.sql

@@ -1,4 +1,5 @@
---@scripts\others.sql
+--@scripts\other_5.sql
+-- @/Users/kenny/Oracle_Home/scripts/others_5.sql
 
 -- This file contains other necessary statement to get all
 -- tables, primary keys, foreign keys, unique constraint, check constraint

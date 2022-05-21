@@ -1,4 +1,5 @@
 --@scripts\create_5.sql
+-- @/Users/kenny/Oracle_Home/scripts/create_5.sql
 
 -- Create the Tables with attributes
 CREATE TABLE players

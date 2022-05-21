@@ -1,4 +1,5 @@
 --@scripts\insert_5.sql
+-- @/Users/kenny/Oracle_Home/scripts/insert_5.sql
 
 -- Use different ways to insert. At least 5 records each table
 

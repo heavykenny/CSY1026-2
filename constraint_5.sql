@@ -1,4 +1,6 @@
 --@scripts\constraint_5.sql
+-- @/Users/kenny/Oracle_Home/scripts/constraint_5.sql
+
 -- Adds Primary key constraint
 ALTER TABLE categories
 ADD CONSTRAINT pk_categories

@@ -1,4 +1,5 @@
 --@scripts\queries_5.sql
+-- @/Users/kenny/Oracle_Home/scripts/queries_5.sql
 
 -- selecting all records from each tables.
 SELECT * FROM players;
